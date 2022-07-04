@@ -2,37 +2,30 @@
 
 /**
  *
- * main - Prints numbers between 00 to 89.
+ * main - Print combinations of two digit numbers
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int i, e;
+	int tens;
+	int ones
 
-	i = 48;
-	e = 48;
+	for (tens = 0; tens <= 9; tens++)
+	 {
+	   for (ones = tens + 1; ones <= 9; ones++)	
+	   {
+		  putchar(tens + '0');
+		  putchar(ones + '0');
 
-	while (e < 58)
-	{
-		i = 48;
-		while (i < 58)
-		{
-			if (e != i && e < i)
-			{
-				putchar(e);
-				putchar(i);
-				if (i == 57 && e == 56)
-				{
-					break;
-				}
-				putchar(',');
-				putchar(' ');
-			}
-			i++;
-		}
-		e++;
-	}
+		  if (tens < 8)
+		  {
+			  putchar(',');
+			  putchar(' ');
+		  }
+	   }
+	 }
 	putchar('\n');
+
 	return (0);
 }
