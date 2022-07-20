@@ -1,4 +1,4 @@
-#include "_putchar"
+#include "main.h"
 
 /**
  * main - function to print
@@ -7,13 +7,13 @@
  */
 int main(void)
 {
-	int i;
-	char p[] = "_putchar";
+	char main[4] = {'M', 'a', 'i', 'n'};
+	unsigned int c;
 
-	for (i = 0; i < 9; i++)
+	for (c = 0; c < sizeof(main); c++)
 	{
-		_putchar(p[i]);
+		_putchar(main[c]);
 	}
-		_putchar('\n');
-	return (0);
+_putchar('\n');
+return (0);
 }
