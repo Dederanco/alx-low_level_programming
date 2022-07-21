@@ -2,16 +2,19 @@
 
 /**
  * _puts_recursion - Prints a string, followed by a new line.
- * @s: The string to be printed.
+ * @s: points to char array or string
+ * Return: Always 0
  */
 void _puts_recursion(char *s)
 {
-	if (*s)
-	{
-		_putchar(*s);
-		_puts_recursion(s + 1);
-	}
+	unsigned int index = 0;
 
-	else
+	if (s[index] == '\0')
+	{
 		_putchar('\n');
+		return;
+	}
+	_putchar(s[index]);
+	_puts_recursion(s + 1);
+
 }
